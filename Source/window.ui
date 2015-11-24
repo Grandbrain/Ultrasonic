@@ -14,7 +14,7 @@
    <string>Ultrasonic 1.0</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="layoutCentralWidget">
     <item row="0" column="0">
      <widget class="QSplitter" name="splitter">
       <property name="orientation">
@@ -64,25 +64,211 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tabConnect">
         <attribute name="title">
          <string>Подключение</string>
         </attribute>
-        <layout class="QGridLayout" name="gridLayout_3"/>
+        <layout class="QGridLayout" name="layoutTabConnect">
+         <item row="1" column="0">
+          <widget class="QPushButton" name="buttonConnect">
+           <property name="palette">
+            <palette>
+             <active>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>0</red>
+                 <green>87</green>
+                 <blue>134</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </active>
+             <inactive>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>0</red>
+                 <green>87</green>
+                 <blue>134</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </inactive>
+             <disabled>
+              <colorrole role="Button">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>120</red>
+                 <green>120</green>
+                 <blue>120</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="ButtonText">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>255</red>
+                 <green>255</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </disabled>
+            </palette>
+           </property>
+           <property name="text">
+            <string>Подключение</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QComboBox" name="comboPorts"/>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QWidget" name="widgetConnectionMessage" native="true">
+           <layout class="QGridLayout" name="layoutConnectionMessage">
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item row="0" column="1">
+             <widget class="QLabel" name="labelConnectionMessage"/>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="labelConnectionResult"/>
+            </item>
+            <item row="0" column="2">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="buttonDisconnect">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Отключение</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <spacer name="spacer1">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="tabHistory">
         <attribute name="title">
          <string>Журнал</string>
         </attribute>
-        <layout class="QGridLayout" name="gridLayout_4"/>
+        <layout class="QGridLayout" name="layoutTabHistory">
+         <item row="0" column="1">
+          <widget class="QToolButton" name="toolButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QTreeWidget" name="treeHistory">
+           <property name="columnCount">
+            <number>1</number>
+           </property>
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">1</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="tabSettings">
         <attribute name="title">
          <string>Настройки</string>
         </attribute>
-        <layout class="QGridLayout" name="gridLayout_5"/>
+        <layout class="QGridLayout" name="layoutTabSettings">
+         <item row="0" column="0">
+          <layout class="QFormLayout" name="layoutForm">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelAutosave">
+             <property name="text">
+              <string>Автосохранение (мин):</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinAutosave">
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>
@@ -132,6 +318,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionStartStop"/>
   </widget>
   <action name="actionExit">
    <property name="text">
@@ -152,6 +339,18 @@
     <string>Информация о программе</string>
    </property>
   </action>
+  <action name="actionStartStop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/root/Resources/pause.ico</normaloff>:/root/Resources/pause.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Пауза</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -162,7 +361,9 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>actionExit</sender>

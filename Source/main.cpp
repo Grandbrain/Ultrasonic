@@ -6,8 +6,8 @@ void Translate()
 {
     QLocale::Language lang = QLocale::system().language();
     QStringList files;
-    if(lang == QLocale::Language::Russian) files = {":/root/Resources/ru.qm"};
-    else files = {":/root/Resources/en.qm"};
+    if(lang == QLocale::Language::Russian) files.append(":/root/Resources/ru.qm");
+    else files.append(":/root/Resources/en.qm");
     foreach (QString file, files)
     {
         QTranslator* trans = new QTranslator(qApp);

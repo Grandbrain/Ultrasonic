@@ -11,9 +11,15 @@ public:
     explicit Ultrasonic();
     virtual ~Ultrasonic();
 
-signals:
+    QStringList GetAvailablePorts();
+    bool Connect(const QString&);
+    void Disconnect();
 
-public slots:
+signals:
+    void OnData(const QByteArray&);
+
+private slots:
+    void OnReady();
 
 private:
     QSerialPort port;
