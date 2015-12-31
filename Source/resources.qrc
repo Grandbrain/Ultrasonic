@@ -8,5 +8,9 @@
         <file>Resources/loader.GIF</file>
         <file>Resources/pause.ico</file>
         <file>Resources/run.ico</file>
+        <file>Resources/closed.ico</file>
+        <file>Resources/document.ico</file>
+        <file>Resources/open.ico</file>
+        <file>Resources/en.qm</file>
     </qresource>
 </RCC>

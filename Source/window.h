@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QTimer>
-#include <QTime>
 #include "ultrasonic.h"
+#include "qcustomplot.h"
 
 namespace Ui
 {
@@ -21,27 +21,40 @@ public:
 
 private slots:
     void OnAbout();
-    void OnConnect();
-    void OnDisconnect();
     void OnRender();
-    void OnStartStop();
-    void OnAutosaveChange();
+    void OnConnect();
     void OnAutosave();
-    void OnAxisNameChange();
-    void OnLegendNameChange();
+    void OnExplorer();
+    void OnStartStop();
     void OnMouseWheel();
+    void OnDisconnect();
+    void OnPathChanged();
     void OnData(const QByteArray&);
+    void OnTreeExpanded(QTreeWidgetItem*);
+    void OnTreeCollapsed(QTreeWidgetItem*);
+    void OnTreeDoubleClicked(QTreeWidgetItem*);
+    void OnAxisNameChange(QCPAxis*, QCPAxis::SelectablePart);
 
 private:
     bool eventFilter(QObject*, QEvent*);
+    void closeEvent(QCloseEvent*);
+    bool OpenFile();
+    bool CloseFile();
+    bool WriteFile();
+    bool LoadHistory();
+    bool ReadSettings();
+    bool WriteSettings();
+    bool ReadFile(QTreeWidgetItem*);
 
 private:
     Ui::Window *ui;
-    QVector<qreal> array;
-    QVector<qreal> saveArray;
-    QTimer renderTimer;
-    QTimer saveTimer;
+    QFile file;
     QTime time;
+    QTimer timer;
+    QString home;
+    QTimer autosave;
+    QVector<qreal> save;
+    QVector<qreal> render;
     Ultrasonic ultrasonic;
 };
 
