@@ -20,6 +20,7 @@ There are several ways to contribute to Ultrasonic project:
 
 *  Download and extract the [latest release](https://github.com/Grandbrain/Ultrasonic/releases) of the source code.
 *  Download and install the latest version of [Qt Community](https://www.qt.io/ru/download-open-source).
+*  Load the sketch "Ultrasonic.ino" to the Arduino device.
 *  Launch Qt Creator and open the project file "Ultrasonic.pro".
 *  Rebuild the project by clicking "Rebuild all" in the "Build" menu.
 *  Launch the application by clicking "Run" in the "Build" menu.
