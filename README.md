@@ -1,5 +1,8 @@
-[![Release](https://img.shields.io/badge/Release-v1.0.0-brightgreen.svg)](https://github.com/Grandbrain/Ultrasonic/releases)
-[![Licence](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Grandbrain/Ultrasonic/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/Grandbrain/Ultrasonic.svg)](https://github.com/Grandbrain/Ultrasonic/releases)
+[![GitHub issues](https://img.shields.io/github/issues/Grandbrain/Ultrasonic.svg)](https://github.com/Grandbrain/Ultrasonic/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Grandbrain/Ultrasonic.svg)](https://github.com/Grandbrain/Ultrasonic/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/Grandbrain/Ultrasonic.svg)](https://github.com/Grandbrain/Ultrasonic/stargazers)
+[![GitHub license](https://img.shields.io/github/license/Grandbrain/Ultrasonic.svg)](https://github.com/Grandbrain/Ultrasonic/blob/master/LICENSE)
 
 # Welcome to Ultrasonic project!
 
